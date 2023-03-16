@@ -6,8 +6,8 @@ export const News = () => {
   let [dataAll,setData]=useState([]);
   useEffect(()=>{
     const fetchData=async()=>{
-         const res=await axios.get("https://newsapi.org/v2/everything?q=tesla&from=2023-02-14&sortBy=publishedAt&apiKey=1d6d8666ddb64fe1bcbda3d72b075c69")
-              setData(res.data.articles);
+         const res=await axios.get("https://anilreddy2009-mern-backend.onrender.com/news")
+              setData(res.data);
           }
           fetchData()
   },[])
